@@ -1,0 +1,10 @@
+.img{
+   width: 200px;
+   height:200px;
+   border-radius: 5px;
+   cursor:pointer;
+}
+
+.main{
+    background-color: #8999A9;
+}

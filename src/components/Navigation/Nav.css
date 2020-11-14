@@ -1,0 +1,11 @@
+nav{
+   
+    background-color: #343A40;
+}
+li a{
+    color:#9AACBE;
+}
+li{
+    list-style:none;
+    display:inline-block;
+}

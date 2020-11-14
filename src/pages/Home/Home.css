@@ -1,0 +1,8 @@
+.mainHome{
+    border:1px solid #FFF2A0;
+    padding:5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:10px;
+    margin:15px;
+}
