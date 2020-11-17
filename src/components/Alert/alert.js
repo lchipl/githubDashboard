@@ -1,5 +1,6 @@
 import React,{useContext} from "react";
 import { AlertContext } from "../../context/alertContext";
+import { GithubContext } from "../../context/github/githubContext";
 import "./alert.scss";
 
 export const Alert = () =>{
@@ -8,6 +9,7 @@ export const Alert = () =>{
      return(
          <div className={`alert`}>
              <p style={{ paddingLeft:"3em"}}> {alert.text ||`тут пока пусто`} </p>
+             
              <button  onClick={hide} style={{width:'60px',height:'30px'}}>close</button>
          </div>
      );

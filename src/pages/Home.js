@@ -8,7 +8,7 @@ export const Home = () =>{
  .fill('');
     return(
         <div className="mainHome">
-            {
+            {loading?<p className="text-center">Загружаю....</p>:
             users.map((user)=><div key={user.id}><Cards user={user}/></div>)}
 
             

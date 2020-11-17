@@ -30,10 +30,12 @@ export const GithubState = ({children}) => {
       withCreds(`https://api.github.com/search/users?q=${value}&`)
     )
       console.log('подсосано', response.data.items)
+      
     dispatch({
       type: SEARCH_USERS,
       payload: response.data.items
     })
+    
   }
 
   const getUser = async name => {

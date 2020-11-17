@@ -1,6 +1,7 @@
 import { CLEAR_USERS, GET_REPOS, GET_USER, SEARCH_USERS,SET_LOADING } from "../types"
+
 const handlers = {
-    [SEARCH_USERS]:(state,action) => ({...state, users:action.payload,  loading:false }),
+    [SEARCH_USERS]:(state,{payload}) => ({...state, users:payload,  loading:false }),
     [GET_REPOS]:(state, action) => ({...state, repos:action.payload, loading:false}),
     [GET_USER]:(state,action) => ({...state, user:action.payload, loading:false}),
     [CLEAR_USERS]: (state) =>({...state, users:[]}),
