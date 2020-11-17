@@ -6,6 +6,7 @@ import {AlertState} from './context/alertState';
 import {Alert} from './components/Alert/alert';
 import {GithubState} from './context/github/githubState';
 const  App = () => {
+  console.log(`это ${process.env.REACT_APP_CLIENT_ID}`)
   return (
   <GithubState>
    <AlertState>
