@@ -2,15 +2,13 @@ import React from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import {Home,Profile,About} from './pages';
 import {Navigation} from './components/Navigation/Navigation';
-import {Provider} from 'react-redux';
-import {Reducer} from './redux/reducer';
-import {createStore} from 'redux';
+import {AlertState} from './context/alertState';
 import {Alert} from './components/Alert/alert';
-const store = createStore(Reducer);
-
+import {GithubState} from './context/github/githubState';
 const  App = () => {
   return (
-    <Provider store={store}>
+  <GithubState>
+   <AlertState>
     <BrowserRouter>
     <Navigation />
     <Alert />
@@ -22,7 +20,8 @@ const  App = () => {
     </Switch>
       
     </BrowserRouter>
-    </Provider>
+   </AlertState>
+  </GithubState>
   );
 }
 
