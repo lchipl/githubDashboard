@@ -12,10 +12,7 @@ export const Navigation = () =>{
           <NavLink exact to="/" className="nav-link">Главная</NavLink>
         </li>
         
-        <li className="nav-item">
-          <NavLink to="/profile" className="nav-link">Профиль</NavLink>
-        </li>
-        <li className="nav-item">
+         <li className="nav-item">
           <NavLink to="/about" className="nav-link">Информация</NavLink>
         </li>
         <li >

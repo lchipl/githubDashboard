@@ -5,12 +5,14 @@ import { GithubContext } from '../../context/github/githubContext';
 export const Search = () => {
     const [valueState,SetValue] = useState('');
 
-    const {alert,show} = useContext(AlertContext)
-    const {search} =useContext(GithubContext)
+    const {alert,show,hide} = useContext(AlertContext)
+    const {search,clearUsers} =useContext(GithubContext)
     const handleSearch = (evt) =>{
         if(evt.key ==="Enter"){
+            clearUsers()
             if(valueState.trim()){
-                show(`отправлено ${valueState}`)
+                hide()
+                
                 SetValue('')
                 search(valueState.trim())
             }else{

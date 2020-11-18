@@ -1,6 +1,5 @@
 import React,{useContext} from "react";
 import { AlertContext } from "../../context/alertContext";
-import { GithubContext } from "../../context/github/githubContext";
 import "./alert.scss";
 
 export const Alert = () =>{
